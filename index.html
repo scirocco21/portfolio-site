@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+   <meta charset="utf-8">
+   <meta name="description" content="Portfolio website for Sebastian Gertz">
+   <meta name="author" content="Sebastian Gertz">
+   <title>Sebastian Gertz</title>
+ 	 <link rel="shortcut icon" type="image/png" href="./assets/favicon-256x256.png">
+
+   <!-- mobile tag -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <!-- js -->
+
+</head>
+
+<body>
+	<!-- header -->
+   <header>
+   	<nav id="main-nav-wrap">
+			<ul class="main-navigation">
+				<li> <a href="#landing-page" title="">Home</a></li>
+				<li><a href="#about" title="">About</a></li>
+				<li><a href="#resume" title="">Resume</a></li>
+				<li><a href="#portfolio" title="">Portfolio</a></li>
+				<li><a href="#contact" title="">Contact</a></li>
+			</ul>
+		</nav>
+   </header> <!-- /header -->
+  <main>
+    <div id="landing-page">
+       <section id="intro">
+ 	  		<h5 id="type-it"></h5>
+	  		<h1 class="bounce-in-top">I'm Sebastian Gertz</h1>
+
+	  		<p>
+		  		<span>| Full-Stack Developer |</span>
+	  		</p>
+        <div class="wrapper">
+         	<ul id="intro-social">
+            <li><a href="https://github.com/scirocco21" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/sebastian-gertz/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://twitter.com/cryptocyclops" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </div>
+     </section>
+   </div>
+
+   <section id="about">
+     <div class="intro-info">
+        <h5>About</h5>
+        <h1>A little bit about myself</h1>
+        <div id="personal">
+          <img src="./assets/SebastianGertz6857.jpg" alt="Profile Picture">
+
+          <p class="lead">A Software Developer with a passion for ideas, I moved into the technology space from a previous career teaching Ancient Greek philosophy and logic. Code combines my love for problem-solving and learning languages with my desire to have a tangible impact through my work. I thrive on new challenges and am always seeking to expand my skill set by learning new technologies and frameworks.</p>
+        </div>
+      <div id="skills">
+        <h1>Skills</h1>
+       	<ul id="skills">
+
+          <li class="devicon"><i class="devicon-jasmine-plain-wordmark"></i></li>
+          <li class="devicon"><i class="devicon-ruby-plain-wordmark"></i></li>
+          <li class="devicon"><i class="devicon-rails-plain-wordmark"></i></li>
+          <li class="devicon"><i class="devicon-javascript-plain"></i></li>
+          <li class="devicon"><i class="devicon-jquery-plain-wordmark"></i></li>
+          <li class="devicon"><i class="devicon-react-plain-wordmark"></i></li>
+          <li class="devicon"><i class="devicon-nodejs-plain"></i></li>
+          <li class="devicon"><i class="devicon-html5-plain-wordmark"></i></li>
+          <li class="devicon"><i class="devicon-css3-plain-wordmark"></i></li>
+          <li class="devicon"><i class="devicon-mysql-plain-wordmark"></i></li>
+          <li class="devicon"><i class="devicon-postgresql-plain-wordmark"></i></li>
+          <li class="devicon"><i class="devicon-git-plain-wordmark"></i></li>
+          <li class="devicon"><i class="devicon-github-plain-wordmark"></i></li>
+          <li class="devicon"><i class="devicon-heroku-original-wordmark"></i></li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="portfolio" class="striped">
+
+  </section>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.7/dist/typeit.min.js"></script>
+  <script>
+    new TypeIt("#type-it", {
+      strings: ["<code>console.log('Hello, World')</code>", "<code>puts 'Hello, World'</code>", "<code>print('Hello, World')</code>", "<code>return 'World never says hello back'</code>"],
+      speed: 90,
+      breakLines: false,
+      autoStart: false,
+      loop: true,
+      nextStringDelay: 3000,
+      lifeLike: true,
+      cursor: true
+    });
+  </script>
+</body>
