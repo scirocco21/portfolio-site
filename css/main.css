@@ -8,7 +8,6 @@ div#landing-page {
   background-attachment: fixed;
   background-position: top;
   background-size: cover;
-
 }
 
 nav#mainNav {
@@ -141,14 +140,13 @@ ul#intro-social > li > a{
   color: #e83e8c;
 }
 
-
 ul#intro-social > li > a:hover{
   padding: 2px 5px;
   color: white;
 }
 
 section#about {
-  height: 110vh;
+  height: 100vh;
 }
 
 .intro-info img {
@@ -208,9 +206,10 @@ p.lead {
 }
 
 section#portfolio {
-  height: 120vh;
+  height: 140vh;
   text-align: center;
   background-color: #f5f5f5;
+  background-image: url("https://www.transparenttextures.com/patterns/white-diamond.png");
 }
 
 #portfolio > h5 {
@@ -234,10 +233,12 @@ div.container {
   justify-content: center;
 }
 
+/* ======================================= */
 /* portfolio-item */
 
 div.portfolio-item {
   margin-right: 10px;
+  margin-top: 10px;
   border-radius: 7.5px;
   overflow: hidden;
   max-width: 320px;
@@ -266,12 +267,15 @@ div.portfolio-item-info > p {
   font-family: 'Noto Sans', sans-serif;
 }
 
+
+/* ======================================= */
 /* display active link in menu bar */
 
 .current > a {
   color: #e83e8c;
 }
 
+/* ======================================= */
 /* handle scroll animation */
 
 .static {
@@ -309,9 +313,10 @@ div.overlay {
   background-color: white;
 }
 
-div.text {
-  color: #e83e8c;
-  font-size: 20px;
+a.button.text {
+  color: #20232a;
+  font-size: 16px;
+  font-weight: bold;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -319,8 +324,18 @@ div.text {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+  padding: 10px;
+  border: 2px solid #e83e8c;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
+a.button.text:hover {
+  background-color: #e83e8c;
+  color: white;
+}
+
+/* ======================================= */
 /* Control hover event over portfolio-item */
 
 div.portfolio-item:hover .overlay {
@@ -339,6 +354,8 @@ div.portfolio-item:hover .portfolio-item-info > p {
   color: #d3d3d3;
 }
 
+
+/* ======================================= */
 /* Tags */
 
 .tags {
@@ -403,6 +420,8 @@ div.portfolio-item:hover .tag::after {
   border-left: 10px solid white;
 }
 
+
+/* ======================================= */
 /* CSS Animations */
 
 .slide-in-left {
