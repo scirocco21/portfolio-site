@@ -250,6 +250,14 @@ div.container > a {
   /* background-color: white;
 } */
 
+.current > a {
+  color: #e83e8c;
+}
+
+.static {
+
+}
+
 img.img-responsive {
   margin: auto;
   height: 180px;

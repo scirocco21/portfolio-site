@@ -3,7 +3,7 @@
    <meta charset="utf-8">
    <meta name="description" content="Portfolio website for Sebastian Gertz">
    <meta name="author" content="Sebastian Gertz">
-   <title>Sebastian Gertz</title>
+   <title>Sebastian Gertz | Web Developer | NYC</title>
  	 <link rel="shortcut icon" type="image/png" href="./assets/favicon-256x256.png">
 
    <!-- mobile tag -->
@@ -20,7 +20,7 @@
 
 <body>
 	<!-- header -->
-   <header>
+   <header id="main-header">
    	<nav id="mainNav" class="stroke">
 			<ul class="main-navigation">
 				<li><a href="#landing-page" title="">Home</a></li>
@@ -53,7 +53,7 @@
    <section id="about">
      <div class="intro-info">
         <h5>About</h5>
-        <h1 class="slide-in-left">A little bit about myself</h1>
+        <h1 data-scroll="toggle(slide-in-left, static)">A little bit about myself</h1>
         <div id="personal">
           <img src="./assets/SebastianGertz6857.jpg" alt="Profile Picture">
 
@@ -84,7 +84,7 @@
   </section>
   <section id="portfolio" class="container-fluid">
     <h5>Portfolio</h5>
-    <h1 class="slide-in-right">Take a look at my projects</h1>
+    <h1 data-scroll="toggle(slide-in-right, static)">Take a look at my projects</h1>
 
     <div id="projects" class="container">
       <div class="image-container">
@@ -134,6 +134,23 @@
 
   </main>
   <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.7/dist/typeit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/0.3.6/ScrollTrigger.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+       var trigger = new ScrollTrigger();
+    });
+  </script>
+
+  <script src="menuspy.js"></script>
+
+  <script>
+    var elm = document.querySelector('#main-header');
+    var ms = new MenuSpy(elm, {
+      activeClass: 'current',
+      threshold: 70
+    });
+  </script>
+
   <script>
     new TypeIt("#type-it", {
       strings: ["<code>console.log('Hello, World')</code>", "<code>puts 'Hello, World'</code>", "<code>print('Hello, World')</code>", "<code>return 'World never says hello back'</code>"],
