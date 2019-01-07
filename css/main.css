@@ -5,10 +5,6 @@ html {
 div#landing-page {
   min-height: 100vh;
   background-image: url("../assets/photo-1422207258071-70754198c4a2.jpeg");
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;; */
   background-attachment: fixed;
   background-position: top;
   background-size: cover;
@@ -214,7 +210,7 @@ p.lead {
 section#portfolio {
   height: 120vh;
   text-align: center;
-  background-color: #f5f5f5;;
+  background-color: #f5f5f5;
 }
 
 #portfolio > h5 {
@@ -237,38 +233,59 @@ div.container {
   align-content: flex-start;
   justify-content: center;
 }
-/*
-div.container > a {
-  flex-grow: 1;
-  flex-basis: 125px;
-  max-width: 250px;
-  margin-bottom: 10px;
-} */
-/*
-.img-responsive:hover {
-  /* transform: scale(1.1); */
-  /* background-color: white;
-} */
+
+/* portfolio-item */
+
+div.portfolio-item {
+  margin-right: 10px;
+  border-radius: 7.5px;
+  overflow: hidden;
+  max-width: 320px;
+}
+
+div.portfolio-item-info {
+  background-color: white;
+  text-align: left;
+  border-radius: 0 0 7.5px 7.5px;
+}
+
+div.portfolio-item-info > h6 {
+  color: #e83e8c;
+  padding-left: 5px;
+  padding-top: 14px;
+  font-size: 16px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 800;
+}
+
+div.portfolio-item-info > p {
+  padding-left: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  color: #636363;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* display active link in menu bar */
 
 .current > a {
   color: #e83e8c;
 }
 
-.static {
+/* handle scroll animation */
 
+.static {
+  /* class required as second argument for ScrollTrigger */
 }
 
 img.img-responsive {
   margin: auto;
-  height: 180px;
-  width: 240px;
-  border-radius: 7.5px;
-  /* transition: transform 1.5s; */
+  height: 240px;
+  width: 320px;
 }
 
 div.image-container {
   position: relative;
-  /* width: 50%; */
 }
 
 div.image-container > a  {
@@ -277,7 +294,6 @@ div.image-container > a  {
   max-width: 250px;
   margin-bottom: 10px;
   position: relative;
-  /* width: 50%; */
 }
 
 div.overlay {
@@ -305,8 +321,86 @@ div.text {
   text-align: center;
 }
 
-div.image-container:hover .overlay {
-  opacity: 1;
+/* Control hover event over portfolio-item */
+
+div.portfolio-item:hover .overlay {
+  opacity: 0.9;
+}
+
+div.portfolio-item:hover .portfolio-item-info {
+  background-color: #20232a;
+}
+
+div.portfolio-item:hover .portfolio-item-info > h6 {
+  color: white;
+}
+
+div.portfolio-item:hover .portfolio-item-info > p {
+  color: #d3d3d3;
+}
+
+/* Tags */
+
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.tags li {
+  float: left;
+}
+
+.tag {
+  background: #636363;
+  border-radius: 3px 0 0 3px;
+  color: white;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 5px;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #636363;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+div.portfolio-item:hover .tag {
+  background: white;
+  color: #636363;
+}
+
+div.portfolio-item:hover .tag::before {
+  background: #20232a;
+}
+
+div.portfolio-item:hover .tag::after {
+  background: #20232a;
+  border-left: 10px solid white;
 }
 
 /* CSS Animations */
