@@ -248,6 +248,7 @@ div.portfolio-item-info {
   background-color: white;
   text-align: left;
   border-radius: 0 0 7.5px 7.5px;
+  transition: .5s ease;
 }
 
 div.portfolio-item-info > h6 {
