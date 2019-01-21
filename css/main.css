@@ -2,12 +2,13 @@ html {
   scroll-behavior: smooth;
 }
 
-div#landing-page {
-  min-height: 100vh;
+#landing-page {
+  height: 100vh;
   background-image: url("../assets/photo-1422207258071-70754198c4a2.jpeg");
   background-attachment: fixed;
   background-position: top;
   background-size: cover;
+  overflow: hidden;
 }
 
 nav#mainNav {
@@ -96,12 +97,12 @@ li > a:hover {
 #intro {
   position: absolute;
   margin: auto;
+  text-align: center;
   top: 25%;
   right: 0;
   bottom: 0;
   left: 0;
-  width: 580px;
-  height: 400px;
+  width: 100%;
   color: white;
   letter-spacing: 0.1em;
 }
@@ -145,15 +146,11 @@ ul#intro-social > li > a:hover{
   color: white;
 }
 
-section#about {
-  height: 100vh;
-}
-
 .intro-info img {
 	height: 8rem;
 	width: 8rem;
 	border-radius: 50%;
-	margin: .9rem 0 0 0;
+	margin: 0 2em;
 	float: left;
 }
 
@@ -164,8 +161,7 @@ div.intro-info {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 680px;
-  height: 400px;
+  width: 100%;
   color: black;
   letter-spacing: 0.1em;
   text-align: center;
@@ -173,10 +169,8 @@ div.intro-info {
 
 li.devicon {
   color: black;
-  font-size: 4em;
-  margin: 15px;
-  width: 50px;
-  height: 50px;
+  font-size: 5em;
+  margin: 15px 5px 15px 5px;
   display: inline-block;
 }
 
@@ -197,15 +191,15 @@ div#personal {
 }
 div#skills {
   margin-top: 35px;
-  margin-bottom: 10px;
 }
 
 p.lead {
-  font-size: 18px;
+  font-size: 2em;
+  padding: 7.5px;
 }
 
 section#portfolio {
-  height: 140vh;
+  
   text-align: center;
   background-color: #f5f5f5;
   background-image: url("https://www.transparenttextures.com/patterns/white-diamond.png");
@@ -224,6 +218,14 @@ section#portfolio {
 div#projects {
   margin-top: 60px;
 }
+
+
+ul#skills {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+} 
+
+.row, .container { margin-right: 0; margin-left: 0; }
 
 div.container {
   display: flex;
@@ -278,7 +280,7 @@ div.portfolio-item-info > p {
 /* ======================================= */
 /* handle scroll animation */
 
-.statcic {
+.static {
   /* class required as second argument for ScrollTrigger */
 }
 
@@ -303,7 +305,7 @@ div.image-container > a  {
 div.overlay {
   position: absolute;
   top: 0;
-  bottom: 0;ß
+  bottom: 0;
   left: 0;
   right: 0;
   height: 100%;
@@ -380,7 +382,8 @@ div.portfolio-item:hover .portfolio-item-info > p {
   position: relative;
   margin: 0 10px 10px 5px;
   text-decoration: none;
-  -webkit-transition: color 0.2s;
+  -webkit-transition: color 0.5s;
+  transition: .5s ease;
 }
 
 .tag::before {
@@ -393,6 +396,7 @@ div.portfolio-item:hover .portfolio-item-info > p {
   position: absolute;
   width: 6px;
   top: 10px;
+  transition: .5s ease;
 }
 
 .tag::after {
@@ -404,20 +408,24 @@ div.portfolio-item:hover .portfolio-item-info > p {
   position: absolute;
   right: 0;
   top: 0;
+  transition: .5s ease;
 }
 
 div.portfolio-item:hover .tag {
   background: white;
   color: #636363;
+  transition: .5s ease;
 }
 
 div.portfolio-item:hover .tag::before {
   background: #20232a;
+  transition: .5s ease;
 }
 
 div.portfolio-item:hover .tag::after {
   background: #20232a;
   border-left: 10px solid white;
+  transition: .5s ease;
 }
 
 
