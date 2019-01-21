@@ -15,6 +15,8 @@ nav#mainNav {
   position: fixed;
   width: 100%;
   z-index: 1;
+  background: rgb(44,44,45);
+  background: radial-gradient(circle, rgba(44,44,45,0.971469395280236) 33%, rgba(15,14,17,1) 65%);
 }
 
 #mainNav ul li a,
@@ -73,8 +75,6 @@ ul.main-navigation {
   text-align: justify;
   display: flex;
   justify-content: center;
-  background: rgb(44,44,45);
-  background: radial-gradient(circle, rgba(44,44,45,0.971469395280236) 33%, rgba(15,14,17,1) 65%);
 }
 
 ul.main-navigation > li {
@@ -355,8 +355,6 @@ div.portfolio-item:hover .portfolio-item-info > h6 {
 div.portfolio-item:hover .portfolio-item-info > p {
   color: #d3d3d3;
 }
-
-
 /* ======================================= */
 /* Tags */
 
@@ -427,8 +425,51 @@ div.portfolio-item:hover .tag::after {
   border-left: 10px solid white;
   transition: .5s ease;
 }
+/* ======================================= */
+/* Responsive Navbar*/
 
-
+a.icon {
+  display: none;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  ul.main-navigation > li:not(:first-child) {
+    display: none;
+  }
+  ul#nav-links {
+    float: left;
+  }
+  a.icon {
+    padding-top: 10px;
+    padding-right: 25px;
+    font-size: 24px;
+    color: white;
+    float: right;
+    display: inline;
+  }
+  a.icon:hover {
+    color: #e83e8c;
+    text-decoration: none;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  ul.responsive {position: relative;}
+  ul.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: -20;
+  }
+  ul.responsive {
+    display: inline-block;
+    width: 66%;
+  }
+  ul.responsive > li:not(:first-child) {
+    float: left;
+    display: inline-block;
+    text-align: left;
+  } 
+}
 /* ======================================= */
 /* CSS Animations */
 
