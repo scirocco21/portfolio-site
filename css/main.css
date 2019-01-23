@@ -472,6 +472,11 @@ a.icon {
     text-decoration: none;
   }
 }
+
+.hidden {
+  display: none;
+}
+
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
   ul.responsive {position: relative;}
@@ -488,6 +493,56 @@ a.icon {
     display: block;
     text-align: left;
   } 
+}
+
+/* Contacts Section */
+section#contact {
+  height: 100%;
+  background-image: url("../joanna-kosinska-290213-unsplash.jpg");
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+#form-container {
+  padding: 35px;
+  background-color: rgba(0,0,0, 0.7);
+  display: inline-block;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#form-container > form {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+#form-container > form > p {
+  margin-top: 15px;
+  text-align: left;
+}
+#form-container > form > input {
+  border-radius: 5px;
+}
+#form-container > form > textarea {
+  border-radius: 5px;
+}
+#form-container > h1 {
+  margin-bottom: 15px;
+}
+#form-container > form > button {
+  margin-top: 25px;
+}
+
+div#submit-message {
+  color: white;
+  display: flex;
+  align-items: center;
 }
 /* ======================================= */
 /* CSS Animations */
