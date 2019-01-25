@@ -103,15 +103,35 @@ li > a:hover {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #e83e8c;
+  color: #e83e8c;
+  background-color: #24292e;
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
 }
 
 #myBtn:hover {
-  background-color: #24292e;
-  color: #e83e8c;
+  color: #24292e;
+  background-color: #e83e8c;
 }
 
 #intro {
@@ -258,8 +278,9 @@ div.container {
 /* portfolio-item */
 
 div.portfolio-item {
-  margin-right: 10px;
+  margin-right: 15px;
   margin-top: 10px;
+  margin-bottom: 35px;
   border-radius: 7.5px;
   overflow: hidden;
   max-width: 320px;
@@ -451,14 +472,15 @@ div.portfolio-item:hover .tag::after {
 a.icon {
   display: none;
 }
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
+/* When the screen is less than 700 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 700px) {
   ul.main-navigation > li:not(:first-child) {
     display: none;
   }
   ul#nav-links {
     float: left;
   }
+
   a.icon {
     padding-top: 10px;
     padding-right: 25px;
@@ -478,7 +500,7 @@ a.icon {
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   ul.responsive {position: relative;}
   ul.responsive a.icon {
     position: absolute;
@@ -492,13 +514,15 @@ a.icon {
   ul.responsive > li:not(:first-child) {
     display: block;
     text-align: left;
+    padding-top: 10px;
+  	padding-bottom: 10px;
   } 
 }
 
 /* Contacts Section */
 section#contact {
   height: 100%;
-  background-image: url("../joanna-kosinska-290213-unsplash.jpg");
+  background-image: url("../assets/joanna-kosinska-290213-unsplash.jpg");
   background-position: top;
   background-size: cover;
   display: flex;
@@ -543,6 +567,15 @@ div#submit-message {
   color: white;
   display: flex;
   align-items: center;
+}
+
+/* Zoom helper class */
+.zoom {
+	transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.2); 
 }
 /* ======================================= */
 /* CSS Animations */

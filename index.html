@@ -30,6 +30,7 @@
 				<li><a href="#landing-page" title="">Home</a></li>
 				<li><a href="#about" title="">About</a></li>
 				<li><a href="#portfolio" title="">Portfolio</a></li>
+        <li><a href="#resume" title="">Resume</a></li>
 				<li><a href="#contact" title="">Contact</a></li>
 			</ul>
       <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><span id="toggler">&#9776;</span></a>
@@ -37,7 +38,7 @@
   </header> <!-- /header -->
   <main>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up zoom"></i></button>
 
     <section id="landing-page">
       <div id="intro">
@@ -49,9 +50,9 @@
 	  		</p>
         <div class="wrapper">
          	<ul id="intro-social">
-            <li><a href="https://github.com/scirocco21" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/sebastian-gertz/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://twitter.com/cryptocyclops" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li class="zoom"><a href="https://github.com/scirocco21" target="_blank" title="Follow me on GitHub"><i class="fab fa-github"></i></a></li>
+            <li class="zoom"><a href="https://www.linkedin.com/in/sebastian-gertz/" target="_blank" title="Follow me on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            <li class="zoom"><a href="https://twitter.com/cryptocyclops" target="_blank" title="Follow me on Twitter"><i class="fab fa-twitter"></i></a></li>
           </ul>
         </div>
       </div>
@@ -206,6 +207,63 @@
       </div>
     </section>
 
+    <section id="resume">
+      <h5>Resume</h5>
+      <section id="work-experience">
+        <h1>Work Experience</h1>
+        <div class="resume-item">
+          <img src="portfolio-black-symbol.png" style="width: 35px;   height: 35px;">
+          <!-- <div class="vl"></div> -->
+          <div class="description"> 
+            <h5>Supernumerary Teaching Fellow in Philosophy</h5>
+            <h6>St John’s College, Oxford</h6>
+            <h6>10/2012-10/2017</h6>
+            <hr>
+          </div>
+        </div>
+        <div class="resume-item">
+         <img src="portfolio-black-symbol.png" style="width: 35px; height: 35px;">
+         <div class="description"> 
+           <h5>Assistant Editor and Research Associate</h5>
+           <h6>King’s College London</h6>
+           <h6>09/2010⎯09/2012</h6>
+           <hr>
+        </div>
+      </section>
+
+      <section id="education">
+        <h1>Education</h1>
+        <div class="resume-item">
+          <img src="graduate-cap.png" style="width: 35px; height: 35px;"">
+          <div class="description">
+            <h5>Software Engineering Program</h5>
+            <h6>Flatiron School</h6>
+            <h6>2018</h6>
+            <hr>
+          </div>
+        </div>
+        <div class="resume-item">
+          <img src="graduate-cap.png" style="width: 35px; height: 35px;"">
+          <div class="description">
+            <h5>Front-End Web Development Nanodegree</h5>
+            <h6>Udacity</h6> 
+            <h6>2018</h6>
+            <hr>
+          </div>
+        </div>
+        <div class="resume-item">
+          <img src="graduate-cap.png" style="width: 35px; height: 35px;"">
+          <div class="description">
+            <h5>PhD Classics</h5>
+            <h6>University of Cambridge</h6> 
+            <h6>2010</h6>
+            <hr>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
     <section id="contact">
       <div id="form-container">
         <h1>Get in touch</h1>
@@ -223,8 +281,23 @@
         </form>
          <div id="submit-message"></div>
       </div>
-    
     </section>
+    <footer>
+      <ul id="intro-social">
+            <li class="zoom"><a href="https://github.com/scirocco21" target="_blank" title="Follow me on GitHub"><i class="fab fa-github"></i></a></li>
+            <li class="zoom"><a href="https://www.linkedin.com/in/sebastian-gertz/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            <li class="zoom"><a href="https://twitter.com/cryptocyclops" target="_blank" title="Follow me on Twitter"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+      <nav>
+        <ul id='footer-nav'>
+          <li><a href="#landing-page" title="">Home</a></li>
+          <li><a href="#about" title="">About</a></li>
+          <li><a href="#portfolio" title="">Portfolio</a></li>
+          <li><a href="#resume" title="">Resume</a></li>
+          <li><a href="#contact" title="">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
 
   </main>
   <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.7/dist/typeit.min.js"></script>
@@ -248,13 +321,6 @@
           $('#contact-form').addClass("hidden");
           $('#form-container > h1').addClass("hidden")
           $('#submit-message').append("<h1>...Transmission received. Thank you for reaching out!</h1>")
-          // var messageAlert = 'alert-' + data.type;
-          // var messageText = data.message;
-          // var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-          // if (messageAlert && messageText) {
-          //  $('#contact-form').find('.messages').html(alertBox);
-          //  $('#contact-form')[0].reset();
-          // }
          }
         });
         return false;
