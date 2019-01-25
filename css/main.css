@@ -614,6 +614,39 @@ div#submit-message {
   align-items: center;
 }
 
+/* Footer */
+
+footer {
+  background-color: #990047;
+  height: 15%;
+}
+
+footer > ul > li > a > i {
+  color: white;
+  margin-bottom: 20px;
+}
+footer > ul > li > a > i:hover {
+  color: black;
+} 
+
+ul#footer-nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+ul#footer-nav > li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+ul#footer-nav > li > a {
+  color: rgba(255,255,255,0.6);
+}
+ul#footer-nav > li > a:hover {
+  color: rgba(255,255,255);
+}
+
+
 /* Zoom helper class */
 .zoom {
 	transition: transform .2s;
