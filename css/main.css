@@ -98,6 +98,10 @@ li > a:hover {
   padding-top: 40px;
 }
 
+/* ================ */
+/* FLOATING BUTTON AT PAGE BOTTON */
+/* ================ */
+
 #myBtn {
   font-size: 1.5em;
   display: none;
@@ -137,6 +141,10 @@ li > a:hover {
   color: #24292e;
   background-color: #e83e8c;
 }
+
+/* ============ */
+/* INTRO */
+/* ============ */
 
 #intro {
   position: absolute;
@@ -190,12 +198,17 @@ ul#intro-social > li > a:hover{
   color: white;
 }
 
-.intro-info img {
-	height: 8rem;
-	width: 8rem;
+#selfie-wrapper {
 	border-radius: 50%;
 	margin: 0 2em;
-	float: left;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+#selfie-wrapper > img {
+  display: inline;
+  margin: 0 auto;
 }
 
 div.intro-info {
@@ -353,7 +366,7 @@ div.overlay {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: white;
+  background-color: #495057;
 }
 
 div.overlay > a > i {
@@ -364,7 +377,7 @@ div.overlay > a > i {
   width: 32px;
   margin: 0 auto;
   font-size: 32px;
-  color: black;
+  color: white;
 }
 
 div.overlay > a > i:hover {
@@ -372,7 +385,7 @@ div.overlay > a > i:hover {
 }
 
 a.button.text {
-  color: #20232a;
+  color: white;
   font-size: 16px;
   font-weight: bold;
   position: absolute;
